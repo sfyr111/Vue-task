@@ -1,0 +1,10 @@
+.newTask {
+    width: 350px;
+}
+
+.todos label input {}
+
+.todos label .creatTime {
+    font-size: 12px;
+    color: #aaa;
+}
