@@ -5,9 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, inital-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
     <title>Vue-task</title>
+    <link rel="stylesheet" href="./node_modules/.3.3.7@bootstrap/dist/css/bootstrap.css">
 </head>
 
 <body>
+    <div id="app">
+        <div class="container">
+            <div class="center-block text-center">
+                <h2>{{message}}</h2>
+                <div class="newTask center-block">
+                    <input type="text" class="form-control" placeholder="输入待办事项" v-model='newTodo' @keypress.enter='addTodo'>
+                    <ol class="todos">
+                        <li v-for='(todo,index) in todoList' class="text-left">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" v-model='todo.done'> 
+                                    {{todo.title}} 
+                                    <span v-if="todo.done">(已完成)</span>
+                                    <span v-else>(未完成)</span>
+                                    <span class="creatTime">创建时间 {{todo.createdAt | date}}</span>
+                                    <button class="btn btn-danger btn-xs" @click='removeTodo(todo)'>X</button>
+                                </label>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
     <script src="./bundle.js"></script>
 </body>
 
