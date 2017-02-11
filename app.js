@@ -1,6 +1,6 @@
 import bar from './bar';
 import Vue from 'vue';
-import './page.css'
+import './page.css';
 bar();
 
 let app = new Vue({
