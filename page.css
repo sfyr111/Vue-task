@@ -1,5 +1,5 @@
 .newTask {
-    width: 350px;
+    width: 490px;
 }
 
 .todos label input {}
@@ -7,4 +7,12 @@
 .todos label .creatTime {
     font-size: 12px;
     color: #aaa;
+}
+
+#sign {
+    width: 490px;
+}
+
+#todo {
+    margin-top: 20px;
 }
